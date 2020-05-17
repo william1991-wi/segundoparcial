@@ -44,12 +44,16 @@ export default class Form extends React.Component {
   render() {
     return (
       <form>
+        <br />
+        <br />
+        <br />
         <input
           name="firstName"
           placeholder="Nombre"
           value={this.state.firstName}
           onChange={e => this.change(e)}
         />
+        <br />
         <br />
         <input
           name="lastName"
@@ -58,34 +62,46 @@ export default class Form extends React.Component {
           onChange={e => this.change(e)}
         />
         <br />
+        <br />
         <input type= "number"
           name="edad"
+          min="0"
+          max="100"
           placeholder="Edad"
           value={this.state.edad}
           onChange={e => this.change(e)}
         />        
         <br />
-        <input
-          name="city"
-          placeholder="Cuidad"
-          value={this.state.city}
+        <br />
+        <input 
+          type= "checkbox"
+          id="city1"
+          name="Confirmación"
+          placeholder="Mayor de edad"
+          //value={this.state.city}
+          value= "Mayor a 18 años"
           onChange={e => this.change(e)}
         />
+        <label for="city1"> Mayor de edad</label><br></br>
         <br />
         <input
           name="email"
+          type="email"
           placeholder="Email"
           value={this.state.email}
           onChange={e => this.change(e)}
         />
         <br />
+        <br />
         <input
           name="password"
+          pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
           type="password"
-          placeholder="Contraseña"
+          placeholder="Contraseña (0-9)"
           value={this.state.password}
           onChange={e => this.change(e)}
         />
+        <br />
         <br />
         <input
           name= "ConfirmPassword"
@@ -95,7 +111,9 @@ export default class Form extends React.Component {
           onChange={e => this.change(e)}
         />
         <br />
-        <button onClick={e => this.onSubmit(e)}>Submit1</button>
+        <br />
+        <br />
+        <button onClick={e => this.onSubmit(e)}>Enviar</button>
       </form>
     );
   }
