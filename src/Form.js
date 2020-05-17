@@ -44,6 +44,8 @@ export default class Form extends React.Component {
   render() {
     return (
       <form>
+        <h1>formulario</h1>
+        <img src="unname.jpg" alt="" width="500" height="333"></img>
         <br />
         <br />
         <br />
