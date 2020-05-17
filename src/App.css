@@ -1,9 +1,6 @@
 body {
-  background-color: #ffffff;
-  background-image: radial-gradient(ellipse at center,
-  rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%),
-  url('https://www.csstextures.com/drops-T168.png');
-  background-repeat: repeat;
+  background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/videoblocks-abstract-light-grey-technology-geometric-motion-graphic-design-seamless-looping-video-animation-ultra-hd-4k-3840x2160_ba0lhe0nf_thumbnail-full01.png);
+  background-color: turquoise;
 }
 .App {
   text-align: center;
@@ -49,7 +46,11 @@ input:invalid {
 }
 
 input:invalid:required {
-  background-image: linear-gradient(to right, pink, lightgreen);
+  background-image: linear-gradient(
+    to right,
+    rgb(211, 198, 236),
+    rgb(238, 236, 248)
+  );
 }
 
 input:valid {
