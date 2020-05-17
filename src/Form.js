@@ -52,6 +52,7 @@ export default class Form extends React.Component {
           placeholder="Nombre"
           value={this.state.firstName}
           onChange={e => this.change(e)}
+          required
         />
         <br />
         <br />
@@ -60,6 +61,7 @@ export default class Form extends React.Component {
           placeholder="Apellido"
           value={this.state.lastName}
           onChange={e => this.change(e)}
+          required
         />
         <br />
         <br />
@@ -70,6 +72,7 @@ export default class Form extends React.Component {
           placeholder="Edad"
           value={this.state.edad}
           onChange={e => this.change(e)}
+          required
         />        
         <br />
         <br />
@@ -81,6 +84,7 @@ export default class Form extends React.Component {
           //value={this.state.city}
           value= "Mayor a 18 años"
           onChange={e => this.change(e)}
+          required
         />
         <label for="city1"> Mayor de edad</label><br></br>
         <br />
@@ -90,6 +94,7 @@ export default class Form extends React.Component {
           placeholder="Email"
           value={this.state.email}
           onChange={e => this.change(e)}
+          required
         />
         <br />
         <br />
@@ -100,6 +105,7 @@ export default class Form extends React.Component {
           placeholder="Contraseña (0-9)"
           value={this.state.password}
           onChange={e => this.change(e)}
+          required
         />
         <br />
         <br />
@@ -109,6 +115,7 @@ export default class Form extends React.Component {
           placeholder="Confirmación"
           value={this.state.ConfirmPassword}
           onChange={e => this.change(e)}
+          required
         />
         <br />
         <br />
