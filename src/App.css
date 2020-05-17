@@ -1,3 +1,10 @@
+body {
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse at center,
+  rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%),
+  url('https://www.csstextures.com/drops-T168.png');
+  background-repeat: repeat;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +42,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+input:invalid {
+  border: 2px solid rgb(116, 223, 16);
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input:valid {
+  border: 2px solid black;
+}
+input:invalid {
+  box-shadow: 0 0 7px 3px rgb(34, 37, 34);
+}
+input:focus:invalid {
+  box-shadow: none;
 }

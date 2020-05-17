@@ -100,12 +100,11 @@ export default class Form extends React.Component {
         <br />
         <input
           name="password"
-          pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+          required pattern="[0-9]*[0-9]" 
           type="password"
           placeholder="Contraseña (0-9)"
           value={this.state.password}
           onChange={e => this.change(e)}
-          required
         />
         <br />
         <br />
