@@ -44,8 +44,6 @@ export default class Form extends React.Component {
   render() {
     return (
       <form>
-        <h1>formulario</h1>
-        <img src="unname.jpg" alt="" width="500" height="333"></img>
         <br />
         <h1>"REGISTRO DE INGRESO"</h1>
         <input
@@ -132,7 +130,7 @@ export default class Form extends React.Component {
         <br />
         <br />
         <br />
-        <button onClick={(e) => this.onSubmit(e)}>Enviar</button>
+        <button onclick="validacion()">ENVIAR</button>
       </form>
     );
   }
