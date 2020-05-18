@@ -2,10 +2,10 @@ import React from 'react';
 
 export default class Form extends React.Component {
   state = {
-    firstName: '',
-    lastName: '',
+    nombre: '',
+    apellido: '',
     edad: '',
-    city: '',
+    box: '',
     email: '',
     password: '',
     ConfirmPassword: '',
@@ -22,21 +22,21 @@ export default class Form extends React.Component {
     e.preventDefault();
     // this.props.onSubmit(this.state);
     this.setState({
-      nombre: '',
-      apellido: '',
-      edad: '',
-      city: '',
-      email: '',
-      password: '',
+      Nombre: '',
+      Apellido: '',
+      Edad: '',
+      Box: '',
+      Email: '',
+      Password: '',
       ConfirmPassword: '',
     });
     this.props.onChange({
-      nombre: '',
-      apellido: '',
-      edad: '',
-      city: '',
-      email: '',
-      password: '',
+      Nombre: '',
+      Apellido: '',
+      Edad: '',
+      Box: '',
+      Email: '',
+      Password: '',
       ConfirmPassword: '',
     });
   };
@@ -45,7 +45,7 @@ export default class Form extends React.Component {
     return (
       <form>
         <br />
-        <h1>"REGISTRO DE INGRESO"</h1>
+        <h1>REGISTRO DE INGRESO</h1>
         <input
           type="image"
           src="https://radcolombia.org/web/sites/default/files/archivos/instituciones/fundacion-universitaria-libertadores/logo-full.png"
@@ -87,15 +87,15 @@ export default class Form extends React.Component {
         <br />
         <input
           type="checkbox"
-          id="city1"
+          id="box"
           name=" Confirmación"
           placeholder="Mayor de edad"
-          //value={this.state.city}
+          //value={this.state.box}
           value="Mayor a 18 años"
           onChange={(e) => this.change(e)}
           required
         />
-        <label for="city1"> Mayor de edad</label>
+        <label for="box"> Mayor de edad</label>
         <br></br>
         <br />
         <input
@@ -129,8 +129,7 @@ export default class Form extends React.Component {
         />
         <br />
         <br />
-        <br />
-        <button onclick="validacion()">ENVIAR</button>
+        <button class="button3">ENVIAR</button>     
       </form>
     );
   }
