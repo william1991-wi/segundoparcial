@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class Form extends React.Component {
   state = {
     nombre: '',
@@ -10,7 +11,22 @@ export default class Form extends React.Component {
     password: '',
     ConfirmPassword: '',
   };
-
+// eslint-disable-next-line no-useless-constructor
+  constructor (props){
+    super(props);
+    this.state = {
+      currentItem: {
+        text: "",
+      },
+    };
+  }
+  handleInput = (event) => {
+    this.setState ({
+        currentItem: {
+         text: event.targert.value,
+        },
+    });  
+  };
   change = (e) => {
     this.props.onChange({ [e.target.name]: e.target.value });
     this.setState({
@@ -60,6 +76,8 @@ export default class Form extends React.Component {
           placeholder=" Nombre"
           value={this.state.nombre}
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
           required
         />
         <br />
@@ -69,6 +87,8 @@ export default class Form extends React.Component {
           placeholder=" Apellido"
           value={this.state.apellido}
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
           required
         />
         <br />
@@ -81,6 +101,8 @@ export default class Form extends React.Component {
           placeholder=" Edad"
           value={this.state.edad}
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
           required
         />
         <br />
@@ -93,6 +115,8 @@ export default class Form extends React.Component {
           //value={this.state.box}
           value="Mayor a 18 años"
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
           required
         />
         <label for="box"> Mayor de edad</label>
@@ -104,18 +128,23 @@ export default class Form extends React.Component {
           placeholder=" Email"
           value={this.state.email}
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
           required
         />
         <br />
         <br />
         <input
           name="password"
-          required
-          pattern="[0-9]*[0-9]"
+          pattern="[0-9]*"
           type="password"
+          inputMode="numeric"
           placeholder=" Contraseña (0-9)"
           value={this.state.password}
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
+          required
         />
         <br />
         <br />
@@ -125,12 +154,19 @@ export default class Form extends React.Component {
           placeholder=" Repetir Contraseña"
           value={this.state.ConfirmPassword}
           onChange={(e) => this.change(e)}
+          //value={this.state.currentItem.text}
+          //onChange={this.handleInput}
           required
         />
         <br />
         <br />
-        <button class="button3">ENVIAR</button>     
+        <button class="button3">ENVIAR</button>
+
+        
+
       </form>
+      
     );
   }
+  
 }
